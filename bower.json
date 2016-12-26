@@ -1,0 +1,24 @@
+{
+  "name": "nylon-tabs",
+  "homepage": "https://github.com/9lon/nylon-tabs",
+  "authors": [
+    "Kitz-Parnupat <dainokung2535@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "keywords": [
+    "nylon-tabs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-tabs": "PolymerElements/paper-tabs#^1.7.0",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.8"
+  }
+}

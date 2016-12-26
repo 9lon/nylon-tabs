@@ -1,0 +1,20 @@
+
+<link rel="import" href="./bower_components/polymer/polymer.html">
+<link rel="import" href="./src/nylon-tabs.html">
+<link rel="import" href="./page-content.html">
+
+
+<dom-module id="page-tabs">
+    <template>
+       <nylon-tabs>
+            <nylon-tab label="name" section="1"></nylon-tab>
+            <nylon-tab section="2"></nylon-tab>
+            <nylon-tab section="3"></nylon-tab>
+        </nylon-tabs>
+    </template>
+    <script>
+        Polymer({
+            is: 'page-tabs'
+        });
+    </script>
+</dom-module>

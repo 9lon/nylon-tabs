@@ -1,0 +1,39 @@
+
+<link rel="import" href="./../bower_components/polymer/polymer.html">
+<link rel="import" href="./../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="./../bower_components/paper-tabs/paper-tabs.html">
+
+<link rel="import" href="./nylon-tab.html">
+
+<dom-module id="nylon-tabs">
+    <template>
+      <style>
+        div{
+            padding: 20px 20px 4px 20px;
+            border-bottom: 1px solid #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      </style>
+      <div>
+          <content></content>
+      </div>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'nylon-tabs',
+            listeners:{
+                'click-me': 'activeSection'
+            },
+            ready:function(){
+                console.log(this.$$('div'));
+            },
+            activeSection:function(e){
+                e.detail.tag.active();
+            },
+            clear:function(){
+                
+            }
+        });
+    </script>
+</dom-module>

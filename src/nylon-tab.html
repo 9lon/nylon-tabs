@@ -1,0 +1,63 @@
+
+<dom-module id="nylon-tab">
+    <template>
+        <style>
+            span{
+                padding:10px 30px 4px 30px;
+                font-size: 22px;
+                color:#3498DB;
+            }
+            .click,.click:hover,span:hover{
+                border-top: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #ddd;
+                border-bottom: 2px solid white;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                color:#424242;
+                cursor: pointer;
+            }
+            .click:hover{
+                color:#424242;
+                background-color:white;
+                cursor: default;
+            }
+            span:hover{
+                background-color:#F2F3F4;
+                border: 0px solid #F2F3F4;
+            }
+            input{
+                display: none;
+            }
+        </style>
+        <span class$="{{chageClass}}" on-tap="click">{{label}}</span>
+    </template>
+    <script>
+        Polymer({
+            is: 'nylon-tab',
+            properties:{
+                label:{
+                    type : String,
+                    value : 'text',
+                },
+                section:{
+                    type: String,
+                }
+            },
+            ready:function(){
+                this.chageClass = "none";
+            },
+            active:function(){
+                this.chageClass = "click";
+            },
+            disabled:function(){
+                this.chageClass = "none";
+            },
+            click:function(){
+                this.disabled();
+                this.fire('click-me',{tag : this});
+            },
+
+        });
+    </script>
+</dom-module>
